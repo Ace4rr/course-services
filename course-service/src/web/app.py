@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+
+
 def create_app(settings, routers, **params):
     app_params = {**settings.app.model_dump(), **params}
     app = FastAPI(**app_params)
